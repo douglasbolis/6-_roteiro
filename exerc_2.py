@@ -1,8 +1,4 @@
-# 	1. Escreva uma funcao que recebe como entrada as dimensoes M e N e o elemento E de preenchimento
-# 	e retorna uma lista de listas que corresponde a uma matriz MxN contendo o elemento e em todas
-#	as posicoes. Exemplo:
-#		>>> cria_matriz(2, 3, 0)
-#		[[0, 0, 0], [0, 0, 0]]
+# 	2. Faca uma func˜ao que recebe uma matriz e a exibe na tela no formato usual utilizado na matematica
 
 def f_preencheMatriz(m, n, el):
 	matrizPreenchida = []
@@ -17,6 +13,15 @@ def f_preencheMatriz(m, n, el):
 	return matrizPreenchida
 #fim funcao
 
+def f_imprimeMatriz(mat):
+	for lin in mat:
+		for el in lin:
+			print('%d ' %(el), end="");
+		#fim for
+		print()
+	#fim for
+#fim funcao
+
 def main():
 	m, n, el, matriz = 0, 0, 0, []
 	
@@ -25,8 +30,8 @@ def main():
 	el = int(input("Informe o elemento a ser preenchido nas posicoes da matriz: "))
 	
 	matriz = f_preencheMatriz(m, n, el)
+	f_imprimeMatriz(matriz)
 	
-	print(matriz)
 #fim main
 
 if __name__ == '__main__':
